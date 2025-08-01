@@ -39,23 +39,19 @@
 //   }
 // }
 
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class FeaturesCard extends StatefulWidget {
   final String title;
   final Gradient gradient; // Use a Gradient
-  final Color splashColor;
-  final Color textColor;
   final VoidCallback onTap;
 
   const FeaturesCard({
     super.key,
     required this.title,
     required this.gradient,
-    required this.splashColor,
-    required this.textColor,
     required this.onTap,
   });
 
@@ -63,7 +59,8 @@ class FeaturesCard extends StatefulWidget {
   State<FeaturesCard> createState() => _FeaturesCardState();
 }
 
-class _FeaturesCardState extends State<FeaturesCard> with SingleTickerProviderStateMixin {
+class _FeaturesCardState extends State<FeaturesCard>
+    with SingleTickerProviderStateMixin {
   late AnimationController _animationController;
   late Animation<double> _scaleAnimation;
 
@@ -119,18 +116,23 @@ class _FeaturesCardState extends State<FeaturesCard> with SingleTickerProviderSt
             ],
           ),
           child: Material(
-            color: Colors.transparent, // Make Material transparent to show gradient
+            color: Colors.transparent,
+            // Make Material transparent to show gradient
             borderRadius: BorderRadius.circular(14),
             child: InkWell(
               borderRadius: BorderRadius.circular(14),
-              splashColor: widget.splashColor.withOpacity(0.12),
-              highlightColor: widget.splashColor.withOpacity(0.06),
+              splashColor: Colors.white.withOpacity(0.12),
+              highlightColor: Colors.white.withOpacity(0.06),
               // onTap is handled by GestureDetector for animation coordination
-              onTap: () { /* onTap is now primarily handled by GestureDetector */ },
-              child: Ink( // Use Ink for decoration if Material is transparent
-                width: Get.width * 0.43,
-                height: 68,
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+              onTap: () {
+                /* onTap is now primarily handled by GestureDetector */
+              },
+              child: Ink(
+                // Use Ink for decoration if Material is transparent
+                width: Get.width * 0.44,
+                height: 62,
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 decoration: BoxDecoration(
                   gradient: widget.gradient, // Apply gradient here
                   borderRadius: BorderRadius.circular(14),
@@ -139,12 +141,12 @@ class _FeaturesCardState extends State<FeaturesCard> with SingleTickerProviderSt
                   child: Text(
                     widget.title,
                     textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: widget.textColor,
-                      fontSize: 15,
-                      fontWeight: FontWeight.w600,
-                      letterSpacing: 0.3,
-                    ),
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                          fontWeight: FontWeight.bold,
+                          fontFamily: GoogleFonts.ubuntu().fontFamily,
+                          color: Colors.white,
+                          letterSpacing: 0.3,
+                        ),
                   ),
                 ),
               ),
@@ -155,4 +157,3 @@ class _FeaturesCardState extends State<FeaturesCard> with SingleTickerProviderSt
     );
   }
 }
-

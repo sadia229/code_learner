@@ -8,6 +8,7 @@ abstract class AppColors {
 class _LightColors {
   final primaryColor = const Color(0xFF0d0d0d);
   final backgroundColor = const Color(0xFFEAE8FF);
+  final activityColor = const Color(0xFFE9EFFF);
 }
 
 class _ExtraColors {
