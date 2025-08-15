@@ -13,6 +13,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   get: ^4.6.6
   google_fonts: ^6.3.0
+  percent_indicator: ^4.2.5
 
 dev_dependencies:
   flutter_test:
