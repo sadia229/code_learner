@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'features_card.dart';
+import 'package:code_editor/presentation/home/components/features_card.dart';
 
 class FeaturesComponent extends StatelessWidget {
   const FeaturesComponent({super.key});
@@ -25,7 +25,7 @@ class FeaturesComponent extends StatelessWidget {
                   onTap: () {},
                 ),
                 //const Spacer(),
-                SizedBox(width: 12),
+                const SizedBox(width: 12),
                 FeaturesCard(
                   title: "CV Screening",
                   gradient: LinearGradient(
@@ -37,7 +37,7 @@ class FeaturesComponent extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 12),
+            const SizedBox(height: 12),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -50,7 +50,7 @@ class FeaturesComponent extends StatelessWidget {
                   ),
                   onTap: () {},
                 ),
-                SizedBox(width: 12),
+                const SizedBox(width: 12),
                 FeaturesCard(
                   title: "Weekly Quiz",
                   gradient: LinearGradient(

@@ -11,7 +11,7 @@ class SplashController extends GetxController {
   }
 
   Future<void> loadOnBoarding() async {
-    await Future.delayed(Duration(milliseconds: 5000));
+    await Future.delayed(const Duration(milliseconds: 5000));
     print("Executed after 300ms");
     Get.toNamed(Routes.TABS);
   }

@@ -1,9 +1,11 @@
+import 'package:code_editor/presentation/editor/editor.screen.dart';
 import 'package:code_editor/presentation/home/home.screen.dart';
+import 'package:code_editor/presentation/profile/profile.screen.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
-import 'controllers/tabs.controller.dart';
+import 'package:code_editor/presentation/tabs/controllers/tabs.controller.dart';
 
 class TabsScreen extends GetView<TabsController> {
   const TabsScreen({super.key});
@@ -28,9 +30,9 @@ class TabsScreen extends GetView<TabsController> {
             ),
             BottomNavigationBarItem(
               icon: Icon(
-                Icons.search,
+                Icons.code,
               ),
-              label: 'Search',
+              label: 'Editor',
             ),
             BottomNavigationBarItem(
               icon: Icon(
@@ -47,12 +49,8 @@ class TabsScreen extends GetView<TabsController> {
           index: controller.tabIndex.value,
           children: const [
             HomeScreen(),
-            Center(
-              child: Text('Search'),
-            ),
-            Center(
-              child: Text('Profile'),
-            ),
+            EditorScreen(),
+            ProfileScreen(),
           ],
         );
       }),

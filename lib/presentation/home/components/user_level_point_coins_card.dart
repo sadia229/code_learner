@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../infrastructure/theme/assets/app.assets.dart';
 
 class UserLevelPointCoinsCard extends StatelessWidget {
   final String title;
@@ -12,7 +11,7 @@ class UserLevelPointCoinsCard extends StatelessWidget {
       {super.key,
       required this.title,
       required this.subtitle,
-      required this.image,  this.height});
+      required this.image,  this.height,});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +24,7 @@ class UserLevelPointCoinsCard extends StatelessWidget {
           children: [
             Text(
               title,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.black,
                 fontSize: 14,
                 fontWeight: FontWeight.w400,
@@ -34,7 +33,7 @@ class UserLevelPointCoinsCard extends StatelessWidget {
             const SizedBox(height: 4),
             Text(
               subtitle,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.black,
                 fontSize: 16,
                 fontWeight: FontWeight.w600,

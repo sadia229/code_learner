@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../infrastructure/theme/assets/app.assets.dart';
 
 class ContestCard extends StatelessWidget {
   const ContestCard({super.key});
@@ -11,7 +10,7 @@ class ContestCard extends StatelessWidget {
       width: double.infinity,
       height: 120,
       decoration: BoxDecoration(
-        color: Color(0xFFd6f6e7),
+        color: const Color(0xFFd6f6e7),
         borderRadius: BorderRadius.circular(12),
       ),
       child: Image.asset(

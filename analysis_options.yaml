@@ -1,4 +1,50 @@
+
 include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude:
+    # Ignore generated files
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+    - "**/generated/**"
+    - "**/*.mocks.dart"
+
+  strong-mode:
+    implicit-casts: false
+    implicit-dynamic: false
+
 linter:
   rules:
-    
+    ### --- Code Safety & Maintainability ---
+    always_use_package_imports: true        # Prevent relative imports across lib/
+    avoid_print: true                        # Don't use print in production
+    avoid_empty_else: true                   # Prevent accidental empty else blocks
+    avoid_dynamic_calls: true                # Avoid calling methods on dynamic without checks
+    avoid_catches_without_on_clauses: true    # Prevent broad catches without knowing the error type
+    avoid_slow_async_io: true                 # Warn about slow file ops in async
+    close_sinks: true                         # Avoid memory leaks from unclosed streams/sinks
+
+    ### --- Performance ---
+    prefer_const_constructors: true           # Reduce widget rebuild cost
+    prefer_const_literals_to_create_immutables: true
+    avoid_redundant_argument_values: true
+    unnecessary_const: true
+
+    ### --- Readability ---
+    require_trailing_commas: true             # Cleaner diffs, easier code reviews
+    sort_child_properties_last: true          # Consistent Flutter widget style
+    prefer_final_fields: true
+    prefer_final_locals: true
+    omit_local_variable_types: false          # Keep explicit types for clarity
+    type_annotate_public_apis: true           # Public API methods must have explicit types
+
+    ### --- Error Prevention ---
+    exhaustive_cases: true                    # All enum cases must be handled in switch
+    throw_in_finally: true                     # Prevent throwing inside finally blocks
+    no_leading_underscores_for_library_prefixes: true
+    use_key_in_widget_constructors: true      # Helps with widget identity in Flutter
+
+    ### --- Testing ---
+    avoid_renaming_method_parameters: true    # Keeps parameter names consistent
+    avoid_unnecessary_containers: true
+    avoid_unnecessary_else: true

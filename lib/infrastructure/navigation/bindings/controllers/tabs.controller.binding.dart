@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-import '../../../../presentation/tabs/controllers/tabs.controller.dart';
+import 'package:code_editor/presentation/tabs/controllers/tabs.controller.dart';
 
 class TabsControllerBinding extends Bindings {
   @override

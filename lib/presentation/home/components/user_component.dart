@@ -14,12 +14,12 @@ class UserComponent extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 ShaderMask(
-                  shaderCallback: (bounds) => LinearGradient(
+                  shaderCallback: (bounds) => const LinearGradient(
                     colors: [Colors.blue, Colors.green], // Define your gradient colors
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                   ).createShader(bounds),
-                  child: Text(
+                  child: const Text(
                     "Hi, John",
                     style: TextStyle(
                       // The color must be white for the gradient to show correctly
@@ -30,7 +30,7 @@ class UserComponent extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 4),
-                Text(
+                const Text(
                   "Let’s Play some interesting Quiz",
                   style: TextStyle(
                     fontSize: 14,
@@ -41,7 +41,7 @@ class UserComponent extends StatelessWidget {
               ],
             ),
             const Spacer(),
-            CircleAvatar(
+            const CircleAvatar(
               radius: 30,
               backgroundColor: Colors.orange,
               backgroundImage: NetworkImage(

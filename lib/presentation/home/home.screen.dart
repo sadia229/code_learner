@@ -4,12 +4,11 @@ import 'package:code_editor/presentation/shared/header/app_header.dart';
 import 'package:code_editor/presentation/shared/space/sliver_sized_box.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'components/daily_learning_streak.dart';
-import 'components/features_components.dart';
-import 'components/practice_question_accuracy.dart';
-import 'components/skill_progress_by_topic.dart';
-import 'components/user_level_point_coins_card.dart';
-import 'controllers/home.controller.dart';
+import 'package:code_editor/presentation/home/components/daily_learning_streak.dart';
+import 'package:code_editor/presentation/home/components/features_components.dart';
+import 'package:code_editor/presentation/home/components/practice_question_accuracy.dart';
+import 'package:code_editor/presentation/home/components/user_level_point_coins_card.dart';
+import 'package:code_editor/presentation/home/controllers/home.controller.dart';
 
 class HomeScreen extends GetView<HomeController> {
   const HomeScreen({super.key});
@@ -21,7 +20,7 @@ class HomeScreen extends GetView<HomeController> {
       body: CustomScrollView(
         slivers: [
           SliverSizedBox(height: Get.height * 0.08),
-          UserComponent(),
+          const UserComponent(),
           SliverSizedBox(height: Get.height * 0.025),
           SliverToBoxAdapter(
             child: Container(
@@ -50,29 +49,20 @@ class HomeScreen extends GetView<HomeController> {
               ),
             ),
           ),
-          SliverSizedBox(height: 16),
-          FeaturesComponent(),
+          const SliverSizedBox(height: 16),
+          const FeaturesComponent(),
           SliverSizedBox(height: Get.height * 0.04),
-          AppHeader(text: "Activity"),
+          const AppHeader(text: "Activity"),
           //SliverToBoxAdapter(child: ContestCard(),)
-          SliverToBoxAdapter(
+          const SliverToBoxAdapter(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   DailyLearningStreak(),
-                  SizedBox(width: 12),
-                  Flexible(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        //SkillProgressByTopic(),
-                        //const SizedBox(height: 12),
-                        PracticeQuestionAccuracy(),
-                      ],
-                    ),
-                  ),
+                  SizedBox(width: 8),
+                  PracticeQuestionAccuracy(),
                 ],
               ),
             ),

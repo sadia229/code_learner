@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
-import '../../../infrastructure/theme/app.colors.dart';
+import 'package:code_editor/infrastructure/theme/app.colors.dart';
 
 class SkillProgressByTopic extends StatelessWidget {
   const SkillProgressByTopic({super.key});
@@ -29,7 +29,7 @@ class SkillProgressByTopic extends StatelessWidget {
                     ),
               ),
               const SizedBox(width: 12),
-              Icon(
+              const Icon(
                 Icons.local_activity,
                 size: 12,
                 color: Colors.black54,
