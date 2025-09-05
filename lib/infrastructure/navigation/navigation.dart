@@ -53,5 +53,20 @@ class Nav {
       page: () => const EditorScreen(),
       binding: EditorControllerBinding(),
     ),
+    GetPage(
+      name: Routes.EXAMPLE_ONE,
+      page: () => const ExampleOneScreen(),
+      binding: ExampleOneControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.REGISTER,
+      page: () => const RegisterScreen(),
+      binding: RegisterControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.LOGIN,
+      page: () => const LoginScreen(),
+      binding: LoginControllerBinding(),
+    ),
   ];
 }

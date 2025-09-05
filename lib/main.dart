@@ -4,14 +4,24 @@ import 'package:get/get.dart';
 
 import 'package:code_editor/infrastructure/navigation/navigation.dart';
 import 'package:code_editor/infrastructure/navigation/routes.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
+
+import 'domain/core/constants/app.constants.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Supabase.initialize(
+    url: supabaseUrl,
+    anonKey: supabaseAnonKey,
+  );
   final initialRoute = await Routes.initialRoute;
   runApp(Main(initialRoute));
 }
 
 class Main extends StatelessWidget {
   final String initialRoute;
+
   const Main(this.initialRoute, {super.key});
 
   @override

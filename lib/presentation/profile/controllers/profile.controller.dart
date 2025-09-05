@@ -1,12 +1,13 @@
 import 'package:get/get.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 class ProfileController extends GetxController {
-  //TODO: Implement ProfileController
+  final user = Rx<User?>(null);
 
-  final count = 0.obs;
   @override
-  void onInit() {
+  Future<void> onInit() async {
     super.onInit();
+    await getUser();
   }
 
   @override
@@ -14,10 +15,8 @@ class ProfileController extends GetxController {
     super.onReady();
   }
 
-  @override
-  void onClose() {
-    super.onClose();
+  Future<void> getUser() async {
+    final session = Supabase.instance.client.auth.currentSession;
+    user.value = session?.user;
   }
-
-  void increment() => count.value++;
 }
