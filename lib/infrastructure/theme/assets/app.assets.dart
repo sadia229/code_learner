@@ -12,6 +12,7 @@ class _LightIcons {
   final String coinBadge = '$_iconsPath/coin.png';
   final String sliderOne = '$_iconsPath/image-one.jpg';
   final String slidertwo = '$_iconsPath/image-two.jpeg';
+  final String commingSoonIcon = '$_iconsPath/comming-soon.png';
 }
 
 

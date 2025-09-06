@@ -68,5 +68,15 @@ class Nav {
       page: () => const LoginScreen(),
       binding: LoginControllerBinding(),
     ),
+    GetPage(
+      name: Routes.COMMING_SOON,
+      page: () => const CommingSoonScreen(),
+      binding: CommingSoonControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.INTERVIEW_PREPARATION,
+      page: () => const InterviewPreparationScreen(),
+      binding: InterviewPreparationControllerBinding(),
+    ),
   ];
 }

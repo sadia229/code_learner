@@ -5,6 +5,8 @@ import 'package:get/get.dart';
 
 import 'package:code_editor/presentation/profile/controllers/profile.controller.dart';
 
+import '../../infrastructure/navigation/routes.dart';
+
 class ProfileScreen extends GetView<ProfileController> {
   const ProfileScreen({super.key});
 
@@ -29,33 +31,35 @@ class ProfileScreen extends GetView<ProfileController> {
                   const SizedBox(height: 16),
                   UserInformationCard(
                     title: "Name",
-                    subtitle: controller.user.value?.userMetadata?['name'] ?? "",
+                    subtitle: controller.users.value?.name ?? "",
                     icon: Icons.person,
                   ),
-                  const UserInformationCard(
+                  UserInformationCard(
                       title: "Email",
-                      subtitle: "x6A7o@example.com",
+                      subtitle: controller.users.value?.email ?? "",
                       icon: Icons.mail),
-                  const UserInformationCard(
+                  UserInformationCard(
                       title: "Phone",
-                      subtitle: "+91 1234567890",
+                      subtitle: controller.users.value?.phone ?? "",
                       icon: Icons.phone),
-                  const UserInformationCard(
-                      title: "Github Username",
-                      subtitle: "johndoe",
-                      icon: Icons.code_sharp),
-                  const UserInformationCard(
-                      title: "Package Details",
-                      subtitle: "Mini Plan",
-                      icon: Icons.list_alt),
-                  const UserInformationCard(
-                      title: "Packages",
-                      subtitle: "",
-                      icon: Icons.monetization_on),
-                  const UserInformationCard(
-                      title: "Tips & Tricks",
-                      subtitle: "",
-                      icon: Icons.tips_and_updates_outlined),
+                  // const UserInformationCard(
+                  //     title: "Github Username",
+                  //     subtitle: "johndoe",
+                  //     icon: Icons.code_sharp),
+                  // const UserInformationCard(
+                  //     title: "Package Details",
+                  //     subtitle: "Mini Plan",
+                  //     icon: Icons.list_alt),
+                  // const UserInformationCard(
+                  //     title: "Packages",
+                  //     subtitle: "",
+                  //     icon: Icons.monetization_on),
+                  UserInformationCard(
+                    title: "Tips & Tricks",
+                    subtitle: "",
+                    icon: Icons.tips_and_updates_outlined,
+                    onTap: () => Get.toNamed(Routes.COMMING_SOON),
+                  ),
                   const UserInformationCard(
                       title: "Terms and Conditions",
                       subtitle: "",

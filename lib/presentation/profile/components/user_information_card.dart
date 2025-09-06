@@ -5,18 +5,20 @@ class UserInformationCard extends StatelessWidget {
   final String title;
   final String subtitle;
   final IconData icon;
+  final Function()? onTap;
 
   const UserInformationCard({
     super.key,
     required this.title,
     required this.subtitle,
     required this.icon,
+    this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      onTap: () {},
+      onTap: onTap,
       contentPadding: const EdgeInsets.symmetric(horizontal: 16.0).copyWith(
         top: 0,
         bottom: 0,

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 import 'package:code_editor/presentation/home/components/features_card.dart';
+import 'package:get/get.dart';
+
+import '../../../infrastructure/navigation/routes.dart';
 
 class FeaturesComponent extends StatelessWidget {
   const FeaturesComponent({super.key});
@@ -22,7 +25,9 @@ class FeaturesComponent extends StatelessWidget {
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                   ),
-                  onTap: () {},
+                  onTap: () {
+                    Get.toNamed(Routes.INTERVIEW_PREPARATION);
+                  },
                 ),
                 //const Spacer(),
                 const SizedBox(width: 12),
@@ -48,7 +53,9 @@ class FeaturesComponent extends StatelessWidget {
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                   ),
-                  onTap: () {},
+                  onTap: () {
+                    Get.toNamed(Routes.COMMING_SOON);
+                  },
                 ),
                 const SizedBox(width: 12),
                 FeaturesCard(

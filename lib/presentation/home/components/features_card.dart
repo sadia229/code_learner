@@ -124,9 +124,7 @@ class _FeaturesCardState extends State<FeaturesCard>
               splashColor: Colors.white.withOpacity(0.12),
               highlightColor: Colors.white.withOpacity(0.06),
               // onTap is handled by GestureDetector for animation coordination
-              onTap: () {
-                /* onTap is now primarily handled by GestureDetector */
-              },
+              onTap: widget.onTap,
               child: Ink(
                 // Use Ink for decoration if Material is transparent
                 width: Get.width * 0.44,

@@ -1,6 +1,8 @@
+export 'package:code_editor/infrastructure/navigation/bindings/controllers/comming_soon.controller.binding.dart'; 
 export 'package:code_editor/infrastructure/navigation/bindings/controllers/editor.controller.binding.dart'; 
 export 'package:code_editor/infrastructure/navigation/bindings/controllers/example_one.controller.binding.dart'; 
 export 'package:code_editor/infrastructure/navigation/bindings/controllers/home.controller.binding.dart'; 
+export 'package:code_editor/infrastructure/navigation/bindings/controllers/interview_preparation.controller.binding.dart'; 
 export 'package:code_editor/infrastructure/navigation/bindings/controllers/login.controller.binding.dart'; 
 export 'package:code_editor/infrastructure/navigation/bindings/controllers/profile.controller.binding.dart'; 
 export 'package:code_editor/infrastructure/navigation/bindings/controllers/register.controller.binding.dart'; 

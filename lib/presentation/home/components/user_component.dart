@@ -1,6 +1,8 @@
+import 'package:code_editor/presentation/home/controllers/home.controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-class UserComponent extends StatelessWidget {
+class UserComponent extends GetView<HomeController> {
   const UserComponent({super.key});
 
   @override
@@ -15,19 +17,22 @@ class UserComponent extends StatelessWidget {
               children: [
                 ShaderMask(
                   shaderCallback: (bounds) => const LinearGradient(
-                    colors: [Colors.blue, Colors.green], // Define your gradient colors
+                    colors: [Colors.blue, Colors.green],
+                    // Define your gradient colors
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                   ).createShader(bounds),
-                  child: const Text(
-                    "Hi, John",
-                    style: TextStyle(
-                      // The color must be white for the gradient to show correctly
-                      color: Colors.white,
-                      fontSize: 28,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
+                  child: Obx(() {
+                    return Text(
+                      "Hi, ${controller.users.value?.name}",
+                      style: const TextStyle(
+                        // The color must be white for the gradient to show correctly
+                        color: Colors.white,
+                        fontSize: 28,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    );
+                  }),
                 ),
                 const SizedBox(height: 4),
                 const Text(

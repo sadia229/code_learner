@@ -7,9 +7,11 @@ import 'package:code_editor/infrastructure/navigation/routes.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 import 'domain/core/constants/app.constants.dart';
+import 'domain/core/di.container.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  DependencyInjection.init();
 
   await Supabase.initialize(
     url: supabaseUrl,

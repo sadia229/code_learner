@@ -17,6 +17,7 @@ dependencies:
   flutter_dartpad: ^0.0.3
   supabase_flutter: ^1.10.25
   shared_preferences: ^2.2.1
+  confetti: ^0.7.0
 
 dev_dependencies:
   flutter_test:
